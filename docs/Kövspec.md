@@ -19,5 +19,15 @@ egy önálló, egyszerű és szórakoztató kétszemélyes játék is lehetne.
 
 ### Igényelt üzleti folyamatok
 Azt fogjuk megvalósítani, hogy a fentebb említett okok miatt elkészítjük a mini-játék önálló változatát android platformra,
-valamit lehetővé tesszük, hogy két ember összemérje tudását egymás ellen. 
+valamint lehetővé tesszük, hogy két ember összemérje tudását egymás ellen. 
 A játék rendelkezni fog saját felhasználói felülettel és követhető játékos statisztikákkal.
+
+### Rendszerre vonatkozó szabályok
+A felhasználói felület XML-ben fog elkészülni. A backend Java-ban lesz programozva, az adatok tárolására pedig SQL adatbázist használunk.
+
+### Követelménylista
+- Egyszerű kezelőfelület
+- Felhasználókezelés (pl.: regisztráció, bejelentkezés)
+- Többjátékos mód támogatása
+- Toplista különböző feltételek alapján
+- Részletes design

@@ -16,3 +16,8 @@ Akkor ér véget a játék, ha valamelyik játékos táblája megtelik, és a gy
 A leírt játék a Cult of the Lamb indie videójáték mini-játéka. A játékon belül a mini-játék a Cult of the Lamb játékban
 csak egy mellék-tevékenységként van jelen bármilyen jelentősebb játékbeli jutalom nélkül, annak ellenére, hogy a mini-játék
 egy önálló, egyszerű és szórakoztató kétszemélyes játék is lehetne.
+
+### Igényelt üzleti folyamatok
+Azt fogjuk megvalósítani, hogy a fentebb említett okok miatt elkészítjük a mini-játék önálló változatát android platformra,
+valamit lehetővé tesszük, hogy két ember összemérje tudását egymás ellen. 
+A játék rendelkezni fog saját felhasználói felülettel és követhető játékos statisztikákkal.

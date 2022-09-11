@@ -36,3 +36,15 @@ azonos értékeket összeszorozzuk összeadás helyett. Ha egy adott oszlopba le
 akkor a másik játékos tábláján ezen oszlopban minden ilyen érték törlődik, és a pontszámuk is átszámolásra kerül.
 - Pontok megjelenítése: mindkét játékos pontszámát megjeleníti egy-egy a játékos felé fordított szövegmező.
 - Játék vége: a játék véget ér, ha valamelyik játékos táblája megtelik. Ekkor a pontszámaik alapján eldől, hogy ki a nyertes.
+
+### Képernyő terv
+A játéktér 3 fő részből áll:
+
+1. A játékosok rendelkeznek egy-egy 3x3-as játéktáblával, amelybe a dobott számokat elhelyezhetik
+2. A játéktér közepén lévő kockával dobhatnak körönként a játékosok
+3. A kocka jobb és bal oldalán egy-egy a játékosok felé fordított pontszámtáblán jelzi a játék a jelenlegi játék-állást
+
+A játékból való kilépésre az eszközön lévő vissza gombbal érhetünk el egy kilépés gombot.
+
+![](../media/img/design.jpg)
+

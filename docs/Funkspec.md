@@ -46,5 +46,6 @@ A játéktér 3 fő részből áll:
 
 A játékból való kilépésre az eszközön lévő vissza gombbal érhetünk el egy kilépés gombot.
 
-![](../media/img/design.jpg)
+<img src="![](../media/img/design.jpg)"  width="30%" height="30%">
+
 

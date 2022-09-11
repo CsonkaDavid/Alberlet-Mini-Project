@@ -17,14 +17,14 @@ A leírt játék a Cult of the Lamb indie videójáték mini-játéka. A játék
 csak egy mellék-tevékenységként van jelen bármilyen jelentősebb játékbeli jutalom nélkül, annak ellenére, hogy a mini-játék
 egy önálló, egyszerű és szórakoztató kétszemélyes játék is lehetne.
 
-### Igényelt üzleti folyamatok
-Azt fogjuk megvalósítani, hogy a fentebb említett okok miatt elkészítjük a mini-játék önálló változatát android platformra,
-valamint lehetővé tesszük, hogy két ember összemérje tudását egymás ellen.
-A játék rendelkezni fog saját felhasználói felülettel és követhető játékos statisztikákkal.
+### Igényelt üzleti folyamatok modellje
+- Elkészíteni a fenti mini-játék önálló verzióját: megvalósítani, hogy Android operiációs rendszeren egy különálló játékként tudjuk játszani
+a mini-játékot
+- Más emberek ellen történő játék lehetővé tétele: 2 ember ugyanazon eszközön körökre osztva 
+- Saját felhasználói felület megléte: az eredeti mini-játékéhoz hasonló kezelőfelület
 
 ### Követelménylista
 - Egyszerű kezelőfelület
-- Felhasználókezelés (pl.: regisztráció, bejelentkezés)
-- Többjátékos mód támogatása
+- Többjátékos mód
 - Toplista különböző feltételek alapján
 - Részletes design

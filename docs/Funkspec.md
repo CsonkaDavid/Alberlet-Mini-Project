@@ -32,8 +32,9 @@ a mini-játékot
 - Főmenü: egy játék kezdése gomb, egy beállításokhoz vezető gomb és egy kilépés gomb.
 - Kockadobás: a kör kezdetekor a játék automatikusan dob egyet a kockával. A dobás után a táblára kell húzni a kidobott kockát.
 - Pontszámító: a táblára helyezett kidobott kockák értékeinek hozzáadása a játékos pontszámához. Egy oszlopba helyezett,
-azonos értékeket összeszorozzuk összeadás helyett. Ha egy adott oszlopba lerakott érték szerepel a másik játékos tábláján ugyanezen oszlopban,
-akkor a másik játékos tábláján ezen oszlopban minden ilyen érték törlődik, és a pontszámuk is átszámolásra kerül.
+azonos értékeket továbbá megszorozzuk a következő szabályok szerint: két azonos érték esetén (a lerakott szám) x4, 3 azonos érték
+esetén (a lerakott szám) x9. Ha egy adott oszlopba lerakott érték szerepel a másik játékos tábláján ugyanezen oszlopban,akkor a
+másik játékos tábláján ezen oszlopban minden ilyen érték törlődik, és a pontszámuk is átszámolásra kerül.
 - Pontok megjelenítése: mindkét játékos pontszámát megjeleníti egy-egy a játékos felé fordított szövegmező.
 - Játék vége: a játék véget ér, ha valamelyik játékos táblája megtelik. Ekkor a pontszámaik alapján eldől, hogy ki a nyertes.
 

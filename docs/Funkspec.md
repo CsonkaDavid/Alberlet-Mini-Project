@@ -51,7 +51,7 @@ A játékból való kilépésre az eszközön lévő vissza gombbal érhetünk e
 
 ### Használati esetek
 
-![](../media/img/cucc.png)
+![](../media/img/usecases.png)
 
 A játékosok egy eszközt fognak használni, ezért egy játékos is elég a játék elindításához a menüből. Innen elérhető még egy beállítások és egy kilépés opció is.
 A játékon belül a játékosok dobhatnak a képernyő közepén lévő kockával és elhelyezhetik a dobott számot a táblájukon.

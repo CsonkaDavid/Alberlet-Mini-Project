@@ -28,5 +28,4 @@ A felhasználói felület XML-ben fog elkészülni, a backend pedig Java-ban les
 ### Követelménylista
 - Egyszerű kezelőfelület
 - Többjátékos mód
-- Toplista különböző feltételek alapján
 - Részletes design

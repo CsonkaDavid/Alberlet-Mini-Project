@@ -1,5 +1,14 @@
 # Funkcionális Specifikáció
 
+### Áttekintés
+Az általunk fejlesztett program egy amőbához hasonló puzzle game.
+A játékot 2 játékos játsza egy-egy 3x3-as játékostáblán, felváltva dobnak, majd a dobás eredményét el tudják helyezni saját táblájukon.
+Ezáltal pontokat tudnak szerezni, azonban bukhatunk is pontokat, ha a másik játékos ugyanazon oszlopba rakja le a miénkkel megegyező számát.
+A játék akkor ér véget, ha a tábla betelik, ekkor az a játékos nyer, akinek több pontja van.
+Alapja a Cult of the Lamb nevű játék minijátéka, azonban a mini-gamenek nem volt kihatása a fő történetszálra.
+Ezért elhatározzuk, megcsináljuk az önálló mobilos változatát, mivel egy klassz egyedi mobiljáték is lehetne.
+Lesz saját felhasználói felülete, például különböző gombok, melyen keresztül vezérelni lehet a játékot.
+
 ### Jelenlegi helyzet leírása
 Egy telefonos alkalmazásokat készítő kisvállalkozás vagyunk, akik szeretnének belépni egy játékkal a mobil játékiparba.
 Ez az első projektünk, és reméljük, hogy megállja majd a helyét a nagyobb cégek termékeivel szemben.

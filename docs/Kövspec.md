@@ -40,9 +40,11 @@ A leírt játék a Cult of the Lamb indie videójáték mini-játéka, a mini-j�
 
 ### Igényelt üzleti folyamatok
 
-Azt fogjuk megvalósítani, hogy a fentebb említett okok miatt elkészítjük a mini-játék önálló változatát android platformra,
-valamint lehetővé tesszük, hogy két ember összemérje tudását egymás ellen. 
-A játék rendelkezni fog saját felhasználói felülettel.
+- A mini-játék önálló változata Android platformra
+
+- Két ember összemérheti tudását egymás ellen
+
+- A játék rendelkezni fog saját felhasználói felülettel
 
 ### Rendszerre vonatkozó szabályok
 

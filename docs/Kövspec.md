@@ -40,7 +40,10 @@ valamint lehetővé tesszük, hogy két ember összemérje tudását egymás ell
 A játék rendelkezni fog saját felhasználói felülettel.
 
 ### Rendszerre vonatkozó szabályok
-A felhasználói felület XML-ben fog elkészülni, a backend pedig Java-ban lesz programozva.
+
+- A felhasználói felület XML-ben fog elkészülni
+
+- A backend Java-ban lesz programozva
 
 ### Követelménylista
 - Egyszerű kezelőfelület

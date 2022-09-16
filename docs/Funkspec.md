@@ -23,10 +23,15 @@ Akkor ér véget a játék, ha valamelyik játékos táblája megtelik, és a gy
 
 ### Jelenlegi üzleti folyamatok modellje
 A leírt játék a Cult of the Lamb indie videójáték mini-játéka, a mini-játék funkciói:
+
 + Kockadobás: automatikusan történik minden egyes kör elején => beírandó érték meghatározása
+
 + Érték beírás: kockadobás után történik => a játékos választja ki, hogy melyik oszlopba akarja rakni a számot
+
 + Pontszámítás: automatikusan történik az érték beírása után, attól függően
+
 + Pontvesztés: automatikusan történik, ha játékos2 egy olyan oszlopba rak egy értéket, ahol már játékos1nek szerepel a saját táblájában vele megegyező értéke
+
 + Győztes meghatározása: pontszám alapján automatikusan történik, miután valamelyik játékos betelítette teljesen a tábláját
 
 ### Igényelt üzleti folyamatok modellje

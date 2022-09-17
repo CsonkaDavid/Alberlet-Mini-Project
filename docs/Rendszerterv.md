@@ -22,7 +22,7 @@ alapján választjuk.
 
 ### Funkcionális terv
 
-*Játékos 1 (eszköz tulajdonos):
+* Játékos 1 (eszköz tulajdonos):
 
   * Ő biztosítja az eszközt
 
@@ -32,7 +32,7 @@ alapján választjuk.
 
   * Játékon belül értékeket raknak le
 
-*Játékos 2:
+* Játékos 2:
 
   * Az eszköz tulajdonos ellen versenyzik
 

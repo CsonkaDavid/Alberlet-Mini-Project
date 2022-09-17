@@ -59,3 +59,17 @@ Menük:
   * A kocka két oldalán a számláló mutatja a játékosok pontjait
 
   * A számláló és a kocka alatt illetve felett helyezkednek el a játékosok táblái amiken elhelyezhetik az értékeket
+
+## Fizikai környezet
+
+* Az alkalmazás android rendszerre fog készülni
+
+* Külső komponensek:
+
+  * hang effektek
+
+* Fejlesztői eszközök:
+
+  * Android Studio
+  
+  * Maven

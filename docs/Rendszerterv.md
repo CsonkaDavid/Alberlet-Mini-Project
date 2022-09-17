@@ -19,3 +19,39 @@ alapján választjuk.
 - Többjátékos mód
 
 - Részletes design
+
+### Funkcionális terv
+
+*Játékos 1 (eszköz tulajdonos):
+
+  * Ő biztosítja az eszközt
+
+  * Kezeli a játék beállításait
+
+  * Elindíthatja a játékot
+
+  * Játékon belül értékeket raknak le
+
+*Játékos 2:
+
+  * Az eszköz tulajdonos ellen versenyzik
+
+  * Játékon belül értékeket raknak le
+
+Menük:
+
+* Főmenü:
+
+  * Játék indítása
+  
+  * Beállítások
+
+  * Kilépés
+
+* Játék felület:
+
+  * A játék felület közepén van a kocka amit a rendszer automatikusan  dob ha a játékos lerakott egy értéket
+
+  * A kocka két oldalán a számláló mutatja a játékosok pontjait
+
+  * A számláló és a kocka alatt illetve felett helyezkednek el a játékosok táblái amiken elhelyezhetik az értékeket

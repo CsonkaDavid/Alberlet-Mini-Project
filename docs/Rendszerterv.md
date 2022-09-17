@@ -12,6 +12,10 @@ A játék rendelkezni fog saját főmenüvel és beállítási lehetőségekkel.
 érintőképernyős megoldások és UI elemek fogják reprodukálni. A felhasználói felület színeit az eredeti játékbeli mini-játék
 alapján választjuk.
 
+### Üzleti folyamatok modellje
+
+![](../media/img/terv.png)
+
 ### Követelménylista
 
 - Egyszerű kezelőfelület

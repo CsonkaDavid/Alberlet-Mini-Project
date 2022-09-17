@@ -60,7 +60,7 @@ Menük:
 
   * A számláló és a kocka alatt illetve felett helyezkednek el a játékosok táblái amiken elhelyezhetik az értékeket
 
-## Fizikai környezet
+### Fizikai környezet
 
 * Az alkalmazás android rendszerre fog készülni
 
@@ -73,3 +73,15 @@ Menük:
   * Android Studio
   
   * Maven
+  
+### Telepítési terv
+
+A játék Android platformra telepíthető
+
+- Az alkalmazás nem Google Play-en keresztül elérhető.
+
+- Elérés módja: Az alkalmazás Github tárolóján keresztül letölthető
+
+- Beállításokban a telepítéshez engedélyezni kell a 3. féltől származó tartalmakat
+
+- Telepítéshez a letöltött ".apk" állományt kell futtatni

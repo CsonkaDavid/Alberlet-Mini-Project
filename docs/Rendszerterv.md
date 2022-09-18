@@ -12,9 +12,6 @@ A játék rendelkezni fog saját főmenüvel és beállítási lehetőségekkel.
 érintőképernyős megoldások és UI elemek fogják reprodukálni. A felhasználói felület színeit az eredeti játékbeli mini-játék
 alapján választjuk.
 
-### Üzleti folyamatok modellje
-
-![](../media/img/terv.png)
 
 ### Követelménylista
 
@@ -23,6 +20,26 @@ alapján választjuk.
 - Többjátékos mód
 
 - Részletes design
+
+
+### Üzleti folyamatok modellje
+
+![](../media/img/terv.png)
+
+A játékban 2 fajta felhasználót különböztetünk meg:
+
+Az eszköz tulajdonos => Játékos1
+
+- "Játékos1" biztosítja a használandó eszközt a játékhoz. Az ő feladata a beállítások kezelése és a játék elindítása.
+
+(Ezen feladatokat elvégezhetné "Játékos2" is, azonban jelképes "irányító" szerepet adunk ebben az esetben "Játékos1"
+felhasználónak a telefon tulajdonjogára hivatkozva.)
+
+Az "ellenfél" játékos => Játékos2
+
+"Játékos2" a "Játékos1" felhasználó ellenfeleként lesz jelen a játékban, azonban jogosultsági különbséget az alkalmazásban
+nem valósítunk meg. Ez azt jelenti, hogy technikailag elvégezhetné ugyanazon feladatokat, melyeket "Játékos1" fog elvégezni,
+a megkülönböztetés érdekében azonban "Játékos2" csak a játék felületen lép közbe.
 
 ### Funkcionális terv
 
@@ -60,6 +77,7 @@ Menük:
 
   * A számláló és a kocka alatt illetve felett helyezkednek el a játékosok táblái amiken elhelyezhetik az értékeket
 
+
 ### Fizikai környezet
 
 * Az alkalmazás android rendszerre fog készülni
@@ -74,6 +92,7 @@ Menük:
   
   * Maven
   
+
 ### Telepítési terv
 
 A játék Android platformra telepíthető
@@ -85,6 +104,7 @@ A játék Android platformra telepíthető
 - Beállításokban a telepítéshez engedélyezni kell a 3. féltől származó tartalmakat
 
 - Telepítéshez a letöltött ".apk" állományt kell futtatni
+
 
 ## Karbantartási terv
 

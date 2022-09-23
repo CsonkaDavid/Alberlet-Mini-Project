@@ -1,4 +1,8 @@
 package net.alberlet.minigame;
 
-public class GameActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class GameActivity extends AppCompatActivity {
+
+
 }

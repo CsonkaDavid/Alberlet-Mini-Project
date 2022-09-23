@@ -1,10 +1,12 @@
-package net.alberlet.minigame;
+package net.alberlet.minigame.gui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import net.alberlet.minigame.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Table {
+
     private List<Integer> firstColumn;
+
     private List<Integer> secondColumn;
+
     private List<Integer> thirdColumn;
 
     public Table() {

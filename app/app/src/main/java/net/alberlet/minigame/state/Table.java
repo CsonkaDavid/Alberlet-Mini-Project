@@ -18,15 +18,21 @@ public class Table {
     }
 
     public void addFirstColumn(Integer integer) {
-        this.firstColumn.add(integer);
+        if(this.firstColumn.size() < 3) {
+            this.firstColumn.add(integer);
+        }
     }
 
     public void addSecondColumn(Integer integer) {
-        this.secondColumn.add(integer);
+        if(this.secondColumn.size() < 3) {
+            this.secondColumn.add(integer);
+        }
     }
 
     public void addThirdColumn(Integer integer) {
-        this.thirdColumn.add(integer);
+        if(this.thirdColumn.size() < 3) {
+            this.thirdColumn.add(integer);
+        }
     }
 
     public Integer getFirstColumn(int index) {

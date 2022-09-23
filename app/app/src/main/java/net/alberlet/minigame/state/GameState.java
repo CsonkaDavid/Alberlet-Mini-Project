@@ -42,10 +42,9 @@ public class GameState {
             currentPlayer.getTable().addFirstColumn(value);
         } else if (column == 2) {
             currentPlayer.getTable().addSecondColumn(value);
-        } else if (column == 3) {
+        } else {
             currentPlayer.getTable().addThirdColumn(value);
         }
-
     }
 
 }

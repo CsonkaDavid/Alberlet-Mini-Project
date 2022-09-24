@@ -32,7 +32,7 @@ public class GameState {
         rollDice();
     }
 
-    private void rollDice() {
+    public void rollDice() {
         Random random = new Random();
         dice = random.nextInt(6) + 1;
     }
@@ -48,11 +48,18 @@ public class GameState {
     }
 
     public boolean isPresentInPlayerTableInColumn(Player player, int column, int value) {
-        if (player.getTable().findInColumn(column, value) == -1) {
-            return false;
-        } else {
-            return true;
-        }
+        return player.getTable().findInColumn(column, value) != -1;
     }
 
+    public int getDice() {
+        return dice;
+    }
+
+    public Player getActivePlayer() {
+        return activePlayer;
+    }
+
+    public Player getInactivePlayer() {
+        return inactivePlayer;
+    }
 }

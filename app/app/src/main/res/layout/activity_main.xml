@@ -14,7 +14,7 @@
         android:layout_marginTop="70sp"
         android:layout_marginBottom="50sp"
         android:fontFamily="sans-serif-black"
-        android:text="KnuckleBones Minigame"
+        android:text="@string/knucklebones_minigame"
         android:textAlignment="center"
         android:textSize="40sp" />
 
@@ -45,7 +45,7 @@
                 android:id="@+id/settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Beállítások"
+                android:text="@string/be_ll_t_sok"
                 android:textSize="30sp"
                 android:onClick="onSettingsButtonClick"/>
         </TableRow>
@@ -58,7 +58,7 @@
                 android:id="@+id/quit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kilépés"
+                android:text="@string/kil_p_s"
                 android:textSize="30sp"
                 android:onClick="onQuitButtonClick"/>
         </TableRow>

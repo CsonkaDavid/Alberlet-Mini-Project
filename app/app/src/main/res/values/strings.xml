@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MiniGame</string>
+    <string name="knucklebones_minigame">KnuckleBones Minigame</string>
+    <string name="be_ll_t_sok">Beállítások</string>
+    <string name="kil_p_s">Kilépés</string>
 </resources>

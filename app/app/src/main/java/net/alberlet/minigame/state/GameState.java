@@ -37,6 +37,11 @@ public class GameState {
         dice = random.nextInt(6) + 1;
     }
 
+    public void refreshScores() {
+        PLAYER_ONE.setScore();
+        PLAYER_TWO.setScore();
+    }
+
     public void addValueToPlayerTableOnColumn(Player player, int column, int value) {
         player.getTable().addToColumn(column, value);
     }

@@ -21,11 +21,11 @@ public class Player {
         return score;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setScore() {
+        this.score = sumOfScores();
     }
 
-    public int sumOfScores() {
+    private int sumOfScores() {
         int score = 0;
 
         for(int i = 0; i < 3; i++) {

@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Table {
 
-    private List<Integer> firstColumn;
+    private final List<Integer> firstColumn;
 
-    private List<Integer> secondColumn;
+    private final List<Integer> secondColumn;
 
-    private List<Integer> thirdColumn;
+    private final List<Integer> thirdColumn;
 
     public Table() {
         this.firstColumn = new ArrayList<>();
@@ -17,45 +17,32 @@ public class Table {
         this.thirdColumn = new ArrayList<>();
     }
 
-    public void addFirstColumn(Integer integer) {
+    public void addFirstColumn(int integer) {
         if(this.firstColumn.size() < 3) {
             this.firstColumn.add(integer);
         }
     }
 
-    public void addSecondColumn(Integer integer) {
+    public void addSecondColumn(int integer) {
         if(this.secondColumn.size() < 3) {
             this.secondColumn.add(integer);
         }
     }
 
-    public void addThirdColumn(Integer integer) {
+    public void addThirdColumn(int integer) {
         if(this.thirdColumn.size() < 3) {
             this.thirdColumn.add(integer);
         }
     }
 
-    public void deleteFromFirstColumn(int index) {
-        firstColumn.remove(index);
+    public List<Integer> getFirstColumn() {
+        return firstColumn;
+    }
+    public List<Integer> getSecondColumn() {
+        return secondColumn;
     }
 
-    public void deleteFromSecondColumn(int index) {
-        secondColumn.remove(index);
-    }
-
-    public void deleteFromThirdColumn(int index) {
-        thirdColumn.remove(index);
-    }
-
-    public Integer getFirstColumn(int index) {
-        return firstColumn.get(index);
-    }
-
-    public Integer getSecondColumn(int index) {
-        return secondColumn.get(index);
-    }
-
-    public Integer getThirdColumn(int index) {
-        return thirdColumn.get(index);
+    public List<Integer> getThirdColumn() {
+        return thirdColumn;
     }
 }

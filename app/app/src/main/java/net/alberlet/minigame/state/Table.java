@@ -17,10 +17,10 @@ public class Table {
         this.thirdColumn = new ArrayList<>();
     }
 
-    public void addToColumn(int columnIndex, int integer) {
+    public void addToColumn(int columnIndex, int value) {
         List<Integer> thisColumn = getColumn(columnIndex);
         if (thisColumn.size() < 3) {
-            thisColumn.add(integer);
+            thisColumn.add(value);
         }
     }
 
@@ -29,7 +29,17 @@ public class Table {
         thisColumn.remove(index);
     }
 
-    public List<Integer> getColumn(int columnIndex) {
+    public int findInColumn(int columnIndex, int value) {
+        List<Integer> thisColumn = getColumn(columnIndex);
+        for (int i = 0; i < thisColumn.size(); i++){
+            if (thisColumn.get(i) == value ) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public List<Integer> getColumn(int columnIndex) throws UnsupportedOperationException {
         if (columnIndex < 1 || columnIndex > 3) {
             throw new UnsupportedOperationException("Az oszlop indexe nem 1 es 3 kozott van!");
         }

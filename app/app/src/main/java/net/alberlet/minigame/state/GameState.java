@@ -12,8 +12,11 @@ public class GameState {
 
     private Player currentPlayer;
 
+    private Player inactivePlayer;
+
     public GameState() {
         currentPlayer = PLAYER_ONE;
+        inactivePlayer = PLAYER_TWO;
         rollDice();
 
     }
@@ -21,8 +24,10 @@ public class GameState {
     private void startTurn() {
         if(currentPlayer.equals(PLAYER_ONE)) {
             currentPlayer = PLAYER_TWO;
+            inactivePlayer = PLAYER_ONE;
         } else {
             currentPlayer = PLAYER_ONE;
+            inactivePlayer = PLAYER_TWO;
         }
         rollDice();
 
@@ -50,5 +55,7 @@ public class GameState {
                 break;
         }
     }
+
+
 
 }

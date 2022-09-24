@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Játék indítása"
-                android:textSize="30sp"
+                android:textSize="@dimen/text_size"
                 android:onClick="onGameStartButtonClick"/>
         </TableRow>
 
@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/be_ll_t_sok"
-                android:textSize="30sp"
+                android:textSize="@dimen/text_size"
                 android:onClick="onSettingsButtonClick"/>
         </TableRow>
         <TableRow
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/kil_p_s"
-                android:textSize="30sp"
+                android:textSize="@dimen/text_size"
                 android:onClick="onQuitButtonClick"/>
         </TableRow>
     </TableLayout>

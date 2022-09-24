@@ -41,6 +41,12 @@ public class GameState {
         player.getTable().addToColumn(column, value);
     }
 
+    public void deleteValueFromColumnFromPlayer(Player player, int column, int value) {
+        while (isPresentInPlayerTableInColumn(player, column, value)) {
+            player.getTable().deleteFromColumn(column, player.getTable().findInColumn(column, value));
+        }
+    }
+
     public boolean isPresentInPlayerTableInColumn(Player player, int column, int value) {
         if (player.getTable().findInColumn(column, value) == -1) {
             return false;
@@ -48,6 +54,5 @@ public class GameState {
             return true;
         }
     }
-    
 
 }

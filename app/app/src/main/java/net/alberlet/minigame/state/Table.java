@@ -17,45 +17,30 @@ public class Table {
         this.thirdColumn = new ArrayList<>();
     }
 
-    public void addFirstColumn(int integer) {
-        if(this.firstColumn.size() < 3) {
-            this.firstColumn.add(integer);
+    public void addToColumn(int columnIndex, int integer) {
+        List<Integer> thisColumn = getColumn(columnIndex);
+        if (thisColumn.size() < 3) {
+            thisColumn.add(integer);
         }
     }
 
-    public void addSecondColumn(int integer) {
-        if(this.secondColumn.size() < 3) {
-            this.secondColumn.add(integer);
+    public void deleteFromColumn(int columnIndex, int index){
+        List<Integer> thisColumn = getColumn(columnIndex);
+        thisColumn.remove(index);
+    }
+
+    public List<Integer> getColumn(int columnIndex) {
+        if (columnIndex < 1 || columnIndex > 3) {
+            throw new UnsupportedOperationException("Az oszlop indexe nem 1 es 3 kozott van!");
         }
-    }
 
-    public void addThirdColumn(int integer) {
-        if(this.thirdColumn.size() < 3) {
-            this.thirdColumn.add(integer);
+        switch (columnIndex) {
+            case 1:
+                return firstColumn;
+            case 2:
+                return secondColumn;
+            default:
+                return thirdColumn;
         }
-    }
-
-    public List<Integer> getFirstColumn() {
-        return firstColumn;
-    }
-
-    public List<Integer> getSecondColumn() {
-        return secondColumn;
-    }
-
-    public List<Integer> getThirdColumn() {
-        return thirdColumn;
-    }
-
-    public void deleteFromFirstColumn(int index){
-        firstColumn.remove(index);
-    }
-
-    public void deleteFromSecondColumn(int index){
-        secondColumn.remove(index);
-    }
-
-    public void deleteFromThirdColumn(int index){
-        thirdColumn.remove(index);
     }
 }

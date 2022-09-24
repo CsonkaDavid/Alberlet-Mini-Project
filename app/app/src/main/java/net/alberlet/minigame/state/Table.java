@@ -34,16 +34,6 @@ public class Table {
             this.thirdColumn.add(integer);
         }
     }
-    public List<Integer> getColumn(int index) {
-        switch (index) {
-            case 1:
-                return getFirstColumn();
-            case 2:
-                return getSecondColumn();
-            default:
-                return getThirdColumn();
-        }
-    }
 
     public List<Integer> getFirstColumn() {
         return firstColumn;
@@ -56,7 +46,5 @@ public class Table {
     public List<Integer> getThirdColumn() {
         return thirdColumn;
     }
-
-
 
 }

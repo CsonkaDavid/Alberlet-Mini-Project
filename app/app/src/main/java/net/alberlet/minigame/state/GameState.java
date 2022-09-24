@@ -1,5 +1,6 @@
 package net.alberlet.minigame.state;
 
+import java.util.List;
 import java.util.Random;
 
 public class GameState {
@@ -57,14 +58,18 @@ public class GameState {
     }
 
     public boolean isPresentInInactivePlayerTableInColumn(int value, int column) {
-        switch (column) {
-            case 1:
-                return activePlayer.getTable().getFirstColumn().contains(value);
-            case 2:
-                return activePlayer.getTable().getSecondColumn().contains(value);
-            default:
-                return activePlayer.getTable().getThirdColumn().contains(value);
-        }
+        return getColumnFromPlayer(inactivePlayer, column).contains(value);
+
     }
 
+    public List<Integer> getColumnFromPlayer(Player player, int column) {
+        switch (column) {
+            case 1:
+                return player.getTable().getFirstColumn();
+            case 2:
+                return player.getTable().getSecondColumn();
+            default:
+                return player.getTable().getThirdColumn();
+        }
+    }
 }

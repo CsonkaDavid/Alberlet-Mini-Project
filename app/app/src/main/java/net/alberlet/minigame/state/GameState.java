@@ -38,12 +38,16 @@ public class GameState {
             throw new UnsupportedOperationException("Az oszlop indexe nem 1 es 3 kozott van!");
         }
 
-        if(column == 1) {
-            currentPlayer.getTable().addFirstColumn(value);
-        } else if (column == 2) {
-            currentPlayer.getTable().addSecondColumn(value);
-        } else {
-            currentPlayer.getTable().addThirdColumn(value);
+        switch (column) {
+            case 1:
+                currentPlayer.getTable().addFirstColumn(value);
+                break;
+            case 2:
+                currentPlayer.getTable().addSecondColumn(value);
+                break;
+            default:
+                currentPlayer.getTable().addThirdColumn(value);
+                break;
         }
     }
 

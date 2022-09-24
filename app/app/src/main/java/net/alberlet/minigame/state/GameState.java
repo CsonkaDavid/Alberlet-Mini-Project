@@ -10,23 +10,23 @@ public class GameState {
 
     private int dice;
 
-    private Player currentPlayer;
+    private Player activePlayer;
 
     private Player inactivePlayer;
 
     public GameState() {
-        currentPlayer = PLAYER_ONE;
+        activePlayer = PLAYER_ONE;
         inactivePlayer = PLAYER_TWO;
         rollDice();
 
     }
 
     private void startTurn() {
-        if(currentPlayer.equals(PLAYER_ONE)) {
-            currentPlayer = PLAYER_TWO;
+        if(activePlayer.equals(PLAYER_ONE)) {
+            activePlayer = PLAYER_TWO;
             inactivePlayer = PLAYER_ONE;
         } else {
-            currentPlayer = PLAYER_ONE;
+            activePlayer = PLAYER_ONE;
             inactivePlayer = PLAYER_TWO;
         }
         rollDice();
@@ -45,17 +45,26 @@ public class GameState {
 
         switch (column) {
             case 1:
-                currentPlayer.getTable().addFirstColumn(value);
+                activePlayer.getTable().addFirstColumn(value);
                 break;
             case 2:
-                currentPlayer.getTable().addSecondColumn(value);
+                activePlayer.getTable().addSecondColumn(value);
                 break;
             default:
-                currentPlayer.getTable().addThirdColumn(value);
+                activePlayer.getTable().addThirdColumn(value);
                 break;
         }
     }
 
-
+    public boolean isPresentInInactivePlayerTableInColumn(int value, int column) {
+        switch (column) {
+            case 1:
+                return activePlayer.getTable().getFirstColumn().contains(value);
+            case 2:
+                return activePlayer.getTable().getSecondColumn().contains(value);
+            default:
+                return activePlayer.getTable().getThirdColumn().contains(value);
+        }
+    }
 
 }

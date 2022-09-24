@@ -28,9 +28,9 @@ public class Player {
     public int sumOfScores() {
         int score = 0;
 
-        score += sumOfScoresInTableColumn(table.getFirstColumn());
-        score += sumOfScoresInTableColumn(table.getSecondColumn());
-        score += sumOfScoresInTableColumn(table.getThirdColumn());
+        for(int i = 0; i < 3; i++) {
+            score += sumOfScoresInTableColumn(table.getColumn(i));
+        }
 
         return score;
     }

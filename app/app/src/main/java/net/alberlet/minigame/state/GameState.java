@@ -19,7 +19,6 @@ public class GameState {
         activePlayer = PLAYER_ONE;
         inactivePlayer = PLAYER_TWO;
         rollDice();
-
     }
 
     private void startTurn() {
@@ -31,7 +30,6 @@ public class GameState {
             inactivePlayer = PLAYER_TWO;
         }
         rollDice();
-
     }
 
     private void rollDice() {
@@ -39,38 +37,17 @@ public class GameState {
         dice = random.nextInt(6) + 1;
     }
 
-    public void addValueToTableOnColumn(int value, int column) throws UnsupportedOperationException{
-        if(column < 1 || column > 3) {
-            throw new UnsupportedOperationException("Az oszlop indexe nem 1 es 3 kozott van!");
-        }
-
-        switch (column) {
-            case 1:
-                activePlayer.getTable().addFirstColumn(value);
-                break;
-            case 2:
-                activePlayer.getTable().addSecondColumn(value);
-                break;
-            default:
-                activePlayer.getTable().addThirdColumn(value);
-                break;
-        }
+    public void addValueToPlayerTableOnColumn(Player player, int column, int value) {
+        player.getTable().addToColumn(column, value);
     }
 
-    public boolean isPresentInInactivePlayerTableInColumn(int value, int column) {
-        return getColumnFromPlayer(inactivePlayer, column).contains(value);
-
-    }
-
-    public List<Integer> getColumnFromPlayer(Player player, int column) {
-        switch (column) {
-            case 1:
-                return player.getTable().getFirstColumn();
-            case 2:
-                return player.getTable().getSecondColumn();
-            default:
-                return player.getTable().getThirdColumn();
+    public boolean isPresentInPlayerTableInColumn(Player player, int column, int value) {
+        if (player.getTable().findInColumn(column, value) == -1) {
+            return false;
+        } else {
+            return true;
         }
     }
+    
 
 }

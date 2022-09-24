@@ -1,54 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context=".gui.MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="125dp"
-        android:layout_height="51dp"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
-
-    <Button
-        android:id="@+id/game_start"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:onClick="onGameStartButtonClick"
-        android:text="Játék indítása"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_height="119dp"
+        android:layout_marginTop="70sp"
+        android:layout_marginBottom="50sp"
+        android:fontFamily="sans-serif-black"
+        android:text="KnuckleBones Minigame"
+        android:textAlignment="center"
+        android:textSize="40sp" />
 
-    <Button
-        android:id="@+id/settings"
+    <TableLayout
+        android:layout_marginTop="80sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onSettingsButtonClick"
-        android:text="Beállítások"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_start" />
+        android:layout_height="wrap_content" >
 
-    <Button
-        android:id="@+id/quit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onQuitButtonClick"
-        android:text="Kilépés"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settings" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/game_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Játék indítása"
+                android:textSize="30sp"
+                android:onClick="onGameStartButtonClick"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="50sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beállítások"
+                android:textSize="30sp"
+                android:onClick="onSettingsButtonClick"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="50sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/quit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kilépés"
+                android:textSize="30sp"
+                android:onClick="onQuitButtonClick"/>
+        </TableRow>
+    </TableLayout>
+
+
+
+</LinearLayout>

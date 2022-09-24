@@ -1,6 +1,7 @@
 package net.alberlet.minigame.state;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class GameState {
@@ -16,13 +17,12 @@ public class GameState {
     private Player inactivePlayer;
 
     public GameState() {
-        activePlayer = PLAYER_ONE;
-        inactivePlayer = PLAYER_TWO;
+        startTurn();
         rollDice();
     }
 
-    private void startTurn() {
-        if(activePlayer.equals(PLAYER_ONE)) {
+    public void startTurn() {
+        if(activePlayer.equals(PLAYER_ONE) || Objects.isNull(activePlayer)) {
             activePlayer = PLAYER_TWO;
             inactivePlayer = PLAYER_ONE;
         } else {

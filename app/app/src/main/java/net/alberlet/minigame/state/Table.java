@@ -47,4 +47,15 @@ public class Table {
         return thirdColumn;
     }
 
+    public void deleteFromFirstColumn(int index){
+        firstColumn.remove(index);
+    }
+
+    public void deleteFromSecondColumn(int index){
+        secondColumn.remove(index);
+    }
+
+    public void deleteFromThirdColumn(int index){
+        thirdColumn.remove(index);
+    }
 }

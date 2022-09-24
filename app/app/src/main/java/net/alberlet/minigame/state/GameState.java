@@ -72,4 +72,5 @@ public class GameState {
                 return player.getTable().getThirdColumn();
         }
     }
+
 }

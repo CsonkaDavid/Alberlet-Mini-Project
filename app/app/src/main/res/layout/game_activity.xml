@@ -1,154 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#0C0C0C"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:background="#0C0C0C"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/player2_table"
             class="net.alberlet.minigame.Column"
-            android:layout_width="@dimen/table_width"
-            android:layout_height="@dimen/table_heigth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="@dimen/table_column_width"
-                android:layout_height="match_parent"
-                android:background="@drawable/plain_border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/table_column_width"
-                    android:background="@drawable/plain_border">
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/plain_border" />
+                        android:layout_height="wrap_content" />
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/table_column_width"
-                    android:background="@drawable/plain_border">
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/plain_border" />
+                        android:layout_height="wrap_content" />
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/table_column_width"
-                    android:background="@drawable/plain_border">
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/plain_border" />
+                        android:layout_height="wrap_content" />
                 </FrameLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="@dimen/table_column_width"
-                android:layout_height="match_parent"
-                android:background="@drawable/plain_border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="@dimen/table_column_width"
-                android:layout_height="match_parent"
-                android:background="@drawable/plain_border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/scoreboard"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/player2_scores"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <EditText
                     android:id="@+id/player2_own_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/score_size"
+                    android:layout_height="@dimen/score_size"
+                    android:background="@drawable/scores_background_without_bottom_border"
                     android:ems="10"
                     android:inputType="number" />
 
                 <EditText
                     android:id="@+id/player2_opponent_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/score_size"
+                    android:layout_height="@dimen/score_size"
+                    android:background="@drawable/scores_background"
                     android:ems="10"
                     android:inputType="number" />
             </LinearLayout>
 
             <FrameLayout
                 android:id="@+id/dice_board"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="@dimen/dice_size"
+                android:layout_height="@dimen/dice_size"
+                android:layout_margin="10dp"
+                android:background="@drawable/dice_board_background"
+                android:padding="@dimen/dice_padding_size">
 
                 <ImageView
                     android:id="@+id/dice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dice_background" />
             </FrameLayout>
 
             <LinearLayout
@@ -159,15 +193,17 @@
 
                 <EditText
                     android:id="@+id/player1_opponent_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/score_size"
+                    android:layout_height="@dimen/score_size"
+                    android:background="@drawable/scores_background_without_bottom_border"
                     android:ems="10"
                     android:inputType="number" />
 
                 <EditText
                     android:id="@+id/player1_own_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/score_size"
+                    android:layout_height="@dimen/score_size"
+                    android:background="@drawable/scores_background"
                     android:ems="10"
                     android:inputType="number" />
             </LinearLayout>
@@ -175,72 +211,125 @@
 
         <LinearLayout
             android:id="@+id/player1_table"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            class="net.alberlet.minigame.Column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_border" />
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background_without_bottom_border">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/table_cell_size"
+                    android:layout_height="@dimen/table_cell_size"
+                    android:background="@drawable/cell_background">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

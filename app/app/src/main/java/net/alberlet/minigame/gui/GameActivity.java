@@ -17,13 +17,20 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
+    public void newTurn() {
+        // TextView players turn
+
+    }
+
     public void onDiceClick(View view) {
-        
+
     }
 
     public void onDiceDrag(View view) {
 
     }
+
+
 
 
 

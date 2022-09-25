@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@drawable/plain_boarder"
+    android:background="@color/charcoal"
     tools:context=".gui.MainActivity">
 
     <TextView
@@ -14,12 +14,12 @@
         android:layout_height="119dp"
         android:layout_marginTop="70sp"
         android:layout_marginBottom="50sp"
-        android:background="@drawable/four_side_boarder"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/app_name"
+        android:background="@drawable/oval_textview"
+        android:fontFamily="@font/sigmar_one"
         android:paddingTop="30sp"
+        android:text="@string/app_name"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/bone"
         android:textSize="40sp" />
 
     <TableLayout
@@ -34,14 +34,14 @@
 
             <Button
                 android:id="@+id/game_start"
-                android:background="@drawable/four_side_boarder"
+                android:background="@drawable/oval_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10sp"
                 android:text="Játék indítása"
                 android:textSize="@dimen/text_size"
                 android:onClick="onGameStartButtonClick"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
 
         </TableRow>
 
@@ -52,14 +52,14 @@
 
             <Button
                 android:id="@+id/settings"
-                android:background="@drawable/four_side_boarder"
+                android:background="@drawable/oval_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10sp"
                 android:text="@string/settings"
                 android:textSize="@dimen/text_size"
                 android:onClick="onSettingsButtonClick"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
         </TableRow>
         <TableRow
             android:layout_marginTop="50sp"
@@ -68,14 +68,14 @@
 
             <Button
                 android:id="@+id/quit"
-                android:background="@drawable/four_side_boarder"
+                android:background="@drawable/oval_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10sp"
                 android:text="@string/quit"
                 android:textSize="@dimen/text_size"
                 android:onClick="onQuitButtonClick"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
         </TableRow>
     </TableLayout>
 

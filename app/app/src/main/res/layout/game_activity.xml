@@ -157,9 +157,16 @@
                     android:id="@+id/player2_own_score"
                     android:layout_width="@dimen/score_size"
                     android:layout_height="@dimen/score_size"
-                    android:background="@drawable/scores_background_without_bottom_border"
+                    android:background="@drawable/scores_background_without_top_border"
                     android:ems="10"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:rotationX="-180"
+                    android:rotationY="-180"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/player2_opponent_score"
@@ -167,7 +174,14 @@
                     android:layout_height="@dimen/score_size"
                     android:background="@drawable/scores_background"
                     android:ems="10"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:rotationX="-180"
+                    android:rotationY="-180"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/lighter_red"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <FrameLayout
@@ -197,7 +211,12 @@
                     android:layout_height="@dimen/score_size"
                     android:background="@drawable/scores_background_without_bottom_border"
                     android:ems="10"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/lighter_red"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/player1_own_score"
@@ -205,7 +224,12 @@
                     android:layout_height="@dimen/score_size"
                     android:background="@drawable/scores_background"
                     android:ems="10"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
 

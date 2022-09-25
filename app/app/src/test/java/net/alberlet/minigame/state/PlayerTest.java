@@ -8,7 +8,7 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testSetScoreWithTwoEqualValues() {
-        Player testPlayer = new Player();
+        Player testPlayer = new Player("testplayer");
 
         testPlayer.getTable().addToColumn(0, 4);
         testPlayer.getTable().addToColumn(0, 5);
@@ -28,7 +28,7 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testSetScoreWithEqualValues() {
-        Player testPlayer = new Player();
+        Player testPlayer = new Player("testplayer");
 
         testPlayer.getTable().addToColumn(0, 5);
         testPlayer.getTable().addToColumn(0, 5);
@@ -47,7 +47,7 @@ public class PlayerTest extends TestCase {
     }
 
     public void testSetScoreWithDifferentValues() {
-        Player testPlayer = new Player();
+        Player testPlayer = new Player("testplayer");
 
         testPlayer.getTable().addToColumn(0, 5);
         testPlayer.getTable().addToColumn(0, 4);

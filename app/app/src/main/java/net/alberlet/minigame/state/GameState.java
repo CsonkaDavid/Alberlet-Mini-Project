@@ -6,9 +6,9 @@ import java.util.Random;
 
 public class GameState {
 
-    private final Player PLAYER_ONE = new Player();
+    private final Player PLAYER_ONE = new Player("player1");
 
-    private final Player PLAYER_TWO = new Player();
+    private final Player PLAYER_TWO = new Player("player2");
 
     private int dice;
 
@@ -66,5 +66,9 @@ public class GameState {
 
     public Player getInactivePlayer() {
         return inactivePlayer;
+    }
+
+    public String getPlayer1Name() {
+        return PLAYER_ONE.toString();
     }
 }

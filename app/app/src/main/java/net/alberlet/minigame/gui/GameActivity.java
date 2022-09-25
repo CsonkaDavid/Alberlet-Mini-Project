@@ -1,7 +1,6 @@
 package net.alberlet.minigame.gui;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import net.alberlet.minigame.R;
 import net.alberlet.minigame.state.GameState;
+import net.alberlet.minigame.state.Player;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -66,6 +66,7 @@ public class GameActivity extends AppCompatActivity {
                    @Override
                     public void onClick(View view) {
                        onDiceClick();
+                       dice.setOnClickListener(null);
                    }
                 });
             }
@@ -73,22 +74,22 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
-    public void newTurn() throws InterruptedException {
+    private void newTurn() throws InterruptedException {
         GAME_STATE.startTurn();
         setTurnDisplay();
     }
 
-    public void onDiceClick() {
+    private void onDiceClick() {
         String dicePath = "@drawable/dice" + GAME_STATE.getDice();
 
         int imgResource = getResources().getIdentifier(dicePath, null, getPackageName());
         @SuppressLint("UseCompatLoadingForDrawables") Drawable diceImage = getResources().getDrawable(imgResource);
 
         dice.setImageDrawable(diceImage);
-        dice.setVisibility(View.VISIBLE);
+
     }
 
-    public void setTurnDisplay() throws InterruptedException {
+    private void setTurnDisplay() throws InterruptedException {
 
 
         if (PLAYER_ONE_TURN.equals(turnDisplay.getText().toString())) {
@@ -102,6 +103,27 @@ public class GameActivity extends AppCompatActivity {
         turnDisplay.setVisibility(View.GONE);
     }
 
+    private void setOnClickListenersForColumns() {
+        Player activePlayer = GAME_STATE.getActivePlayer();
+
+        if(activePlayer.getName().equals("player1")) {
+            for(int i = 0; i < 3; i++) {
+                int finalI = i;
+                player1Table.getChildAt(i).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        LinearLayout layout = (LinearLayout) player1Table.getChildAt(finalI);
+
+                        if (activePlayer.getTable().getColumn(finalI).isEmpty()) {
+                        }
 
 
+                        dice.getDrawable();
+                    }
+                });
+            }
+        } else {
+
+        }
+    }
 }

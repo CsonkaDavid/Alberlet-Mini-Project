@@ -22,71 +22,93 @@
         <LinearLayout
             android:id="@+id/player2_table"
             class="net.alberlet.minigame.Column"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/table_width"
+            android:layout_height="@dimen/table_heigth"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/table_column_width"
                 android:layout_height="match_parent"
+                android:background="@drawable/plain_border"
                 android:orientation="vertical">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    android:layout_height="@dimen/table_column_width"
+                    android:background="@drawable/plain_border">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/plain_border" />
+                </FrameLayout>
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    android:layout_height="@dimen/table_column_width"
+                    android:background="@drawable/plain_border">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/plain_border" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/table_column_width"
+                    android:background="@drawable/plain_border">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/plain_border" />
+                </FrameLayout>
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/table_column_width"
                 android:layout_height="match_parent"
+                android:background="@drawable/plain_border"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/table_column_width"
                 android:layout_height="match_parent"
+                android:background="@drawable/plain_border"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
             </LinearLayout>
         </LinearLayout>
 
@@ -126,7 +148,7 @@
                     android:id="@+id/dice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
             </FrameLayout>
 
             <LinearLayout
@@ -165,17 +187,17 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
             </LinearLayout>
 
             <LinearLayout
@@ -186,17 +208,17 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
             </LinearLayout>
 
             <LinearLayout
@@ -207,17 +229,17 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/plain_boarder" />
+                    app:srcCompat="@drawable/plain_border" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

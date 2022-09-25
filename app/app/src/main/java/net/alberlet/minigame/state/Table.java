@@ -40,14 +40,14 @@ public class Table {
     }
 
     public List<Integer> getColumn(int columnIndex) throws UnsupportedOperationException {
-        if (columnIndex < 1 || columnIndex > 3) {
-            throw new UnsupportedOperationException("Az oszlop indexe nem 1 es 3 kozott van!");
+        if (columnIndex < 0 || columnIndex > 2) {
+            throw new UnsupportedOperationException("Az oszlop indexe nem 0 es 2 kozott van!");
         }
 
         switch (columnIndex) {
-            case 1:
+            case 0:
                 return firstColumn;
-            case 2:
+            case 1:
                 return secondColumn;
             default:
                 return thirdColumn;

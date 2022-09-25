@@ -6,9 +6,9 @@ import java.util.Random;
 
 public class GameState {
 
-    private static final Player PLAYER_ONE = new Player();
+    private final Player PLAYER_ONE = new Player();
 
-    private static final Player PLAYER_TWO = new Player();
+    private final Player PLAYER_TWO = new Player();
 
     private int dice;
 
@@ -22,7 +22,7 @@ public class GameState {
     }
 
     public void startTurn() {
-        if(activePlayer.equals(PLAYER_ONE) || Objects.isNull(activePlayer)) {
+        if(Objects.isNull(activePlayer) || activePlayer.equals(PLAYER_ONE)) {
             activePlayer = PLAYER_TWO;
             inactivePlayer = PLAYER_ONE;
         } else {

@@ -1,38 +1,52 @@
 package net.alberlet.minigame.gui;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import net.alberlet.minigame.R;
+import net.alberlet.minigame.state.GameState;
 
 public class GameActivity extends AppCompatActivity {
 
-    TextView turnDisplay;
+    private RelativeLayout rootView;
 
-    ImageView dice;
+    private TextView turnDisplay;
 
-    View player1Table;
+    private ImageView dice;
 
-    View player2Table;
+    private LinearLayout player1Table;
 
-    TextView player1OwnScore;
+    private LinearLayout player2Table;
 
-    TextView player1OpponentScore;
+    private TextView player1OwnScore;
 
-    TextView player2OwnScore;
+    private TextView player1OpponentScore;
 
-    TextView player2OpponentScore;
+    private TextView player2OwnScore;
 
-    private static final GameController GAME_CONTROLLER = new GameController();
+    private TextView player2OpponentScore;
 
+    private static final GameState GAME_STATE = new GameState();
+
+    private final String PLAYER_ONE_TURN = "Player1's Turn";
+
+    private final String PLAYER_TWO_TURN = "Player2's Turn";
+
+    @SuppressLint("MissingInflatedId")
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_activity);
 
+        rootView = findViewById(R.id.root_layout);
         turnDisplay = findViewById(R.id.turn_display);
         dice = findViewById(R.id.dice);
         player1Table = findViewById(R.id.player1_table);
@@ -42,24 +56,51 @@ public class GameActivity extends AppCompatActivity {
         player2OwnScore = findViewById(R.id.player2_own_score);
         player2OpponentScore = findViewById(R.id.player2_opponent_score);
 
-
+        rootView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                turnDisplay.setVisibility(View.GONE);
+                GAME_STATE.startTurn();
+                dice.setVisibility(View.VISIBLE);
+                dice.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                    public void onClick(View view) {
+                       onDiceClick();
+                   }
+                });
+            }
+        });
 
     }
 
-    public void newTurn() {
-        // TextView players turn
-
+    public void newTurn() throws InterruptedException {
+        GAME_STATE.startTurn();
+        setTurnDisplay();
     }
 
-    public void onDiceClick(View view) {
+    public void onDiceClick() {
+        String dicePath = "@drawable/dice" + GAME_STATE.getDice();
 
+        int imgResource = getResources().getIdentifier(dicePath, null, getPackageName());
+        @SuppressLint("UseCompatLoadingForDrawables") Drawable diceImage = getResources().getDrawable(imgResource);
+
+        dice.setImageDrawable(diceImage);
+        dice.setVisibility(View.VISIBLE);
     }
 
-    public void onDiceDrag(View view) {
+    public void setTurnDisplay() throws InterruptedException {
 
+
+        if (PLAYER_ONE_TURN.equals(turnDisplay.getText().toString())) {
+            turnDisplay.setText(PLAYER_TWO_TURN);
+        } else {
+            turnDisplay.setText(PLAYER_ONE_TURN);
+        }
+
+        turnDisplay.setVisibility(View.VISIBLE);
+        Thread.sleep(1000);
+        turnDisplay.setVisibility(View.GONE);
     }
-
-
 
 
 

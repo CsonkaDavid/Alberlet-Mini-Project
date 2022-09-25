@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:background="@color/charcoal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".gui.MainActivity">
 
     <TextView
@@ -23,62 +24,61 @@
         android:textSize="40sp" />
 
     <TableLayout
-        android:layout_marginTop="80sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80sp">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/game_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/oval_button"
+                android:onClick="onGameStartButtonClick"
+                android:padding="10sp"
+                android:text="Játék indítása"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+
+        </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
-
-            <Button
-                android:id="@+id/game_start"
-                android:background="@drawable/oval_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10sp"
-                android:text="Játék indítása"
-                android:textSize="@dimen/text_size"
-                android:onClick="onGameStartButtonClick"
-                android:textColor="@color/white"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_marginTop="50sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_marginTop="50sp">
 
             <Button
                 android:id="@+id/settings"
-                android:background="@drawable/oval_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/oval_button"
+                android:onClick="onSettingsButtonClick"
                 android:padding="10sp"
                 android:text="@string/settings"
-                android:textSize="@dimen/text_size"
-                android:onClick="onSettingsButtonClick"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
         </TableRow>
+
         <TableRow
-            android:layout_marginTop="50sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp">
 
             <Button
                 android:id="@+id/quit"
-                android:background="@drawable/oval_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/oval_button"
+                android:onClick="onQuitButtonClick"
                 android:padding="10sp"
                 android:text="@string/quit"
-                android:textSize="@dimen/text_size"
-                android:onClick="onQuitButtonClick"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
         </TableRow>
     </TableLayout>
-
 
 
 </LinearLayout>

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MiniGame"
         tools:targetApi="31">
         <activity
+            android:name=".gui.GameActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".gui.SettingsActivity"
+            android:exported="true"/>
+        <activity
             android:name=".gui.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,6 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>

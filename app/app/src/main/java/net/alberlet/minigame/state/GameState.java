@@ -42,17 +42,18 @@ public class GameState {
         PLAYER_TWO.setScore();
     }
 
-    public void addValueToPlayerTableOnColumn(Player player, int column, int value) {
-        player.getTable().addToColumn(column, value);
+    public void addValueToPlayerTableOnColumn(String playerName, int column, int value) {
+        getPlayer(playerName).getTable().addToColumn(column, value);
     }
 
-    public void deleteValueFromColumnFromPlayer(Player player, int column, int value) {
+    public void deleteValueFromColumnFromPlayer(String playerName, int column, int value) {
+        Player player = getPlayer(playerName);
         while (isPresentInPlayerTableInColumn(player, column, value)) {
             player.getTable().deleteFromColumn(column, player.getTable().findInColumn(column, value));
         }
     }
 
-    public boolean isPresentInPlayerTableInColumn(Player player, int column, int value) {
+    private boolean isPresentInPlayerTableInColumn(Player player, int column, int value) {
         return player.getTable().findInColumn(column, value) != -1;
     }
 
@@ -60,15 +61,27 @@ public class GameState {
         return dice;
     }
 
-    public Player getActivePlayer() {
-        return activePlayer;
+
+    public String getActivePlayerName() {
+        return activePlayer.getName();
     }
 
-    public Player getInactivePlayer() {
-        return inactivePlayer;
+    public String getInactivePlayerName() {
+        return inactivePlayer.getName();
     }
 
-    public String getPlayer1Name() {
-        return PLAYER_ONE.toString();
+    public int getSizeOfColumnFromPlayer(String playerName, int columnIndex) {
+        return getPlayer(playerName).getTable().getColumnSize(columnIndex);
     }
+
+    private Player getPlayer(String playerName) {
+        if (playerName.equals(PLAYER_ONE.getName())) {
+            return PLAYER_ONE;
+        } else if (playerName.equals(PLAYER_TWO.getName())){
+            return PLAYER_TWO;
+        } else {
+            return null;
+        }
+    }
+
 }

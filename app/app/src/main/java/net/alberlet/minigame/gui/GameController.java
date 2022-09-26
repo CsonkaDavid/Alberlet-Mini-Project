@@ -13,11 +13,11 @@ public class GameController {
         GAME_STATE.startTurn();
     }
 
-    public String getCurrentPlayerName(){
-
-        return GAME_STATE.getActivePlayer().toString();
-
-    }
+//    public String getCurrentPlayerName(){
+//
+//        return GAME_STATE.getActivePlayer().toString();
+//
+//    }
 
 
 

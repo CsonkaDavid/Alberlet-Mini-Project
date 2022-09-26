@@ -102,4 +102,8 @@ public class Table {
         }
     }
 
+    public int getColumnSize(int columnIndex) {
+        return getColumn(columnIndex).size();
+    }
+
 }

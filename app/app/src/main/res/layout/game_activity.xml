@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0C0C0C"
+    android:clickable="true"
+    android:focusable="true"
     android:gravity="center_horizontal"
     android:padding="20dp">
 
@@ -22,43 +24,53 @@
             class="net.alberlet.minigame.Column"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:rotationX="-180"
+            android:rotationY="-180">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background">
+                    android:background="@drawable/cell_background"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -66,36 +78,44 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background">
+                    android:background="@drawable/cell_background"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -104,36 +124,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background">
+                    android:background="@drawable/cell_background"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -159,6 +187,7 @@
                     android:layout_width="@dimen/score_size"
                     android:layout_height="@dimen/score_size"
                     android:background="@drawable/scores_background_without_top_border"
+                    android:clickable="false"
                     android:ems="10"
                     android:inputType="number"
                     android:rotationX="-180"
@@ -174,6 +203,7 @@
                     android:layout_width="@dimen/score_size"
                     android:layout_height="@dimen/score_size"
                     android:background="@drawable/scores_background"
+                    android:clickable="false"
                     android:ems="10"
                     android:inputType="number"
                     android:rotationX="-180"
@@ -211,6 +241,7 @@
                     android:layout_width="@dimen/score_size"
                     android:layout_height="@dimen/score_size"
                     android:background="@drawable/scores_background_without_bottom_border"
+                    android:clickable="false"
                     android:ems="10"
                     android:inputType="number"
                     android:text="0"
@@ -224,6 +255,7 @@
                     android:layout_width="@dimen/score_size"
                     android:layout_height="@dimen/score_size"
                     android:background="@drawable/scores_background"
+                    android:clickable="false"
                     android:ems="10"
                     android:inputType="number"
                     android:text="0"
@@ -245,37 +277,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="true">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background">
+                    android:background="@drawable/cell_background"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -283,12 +323,15 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -302,17 +345,20 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background">
+                    android:background="@drawable/cell_background"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -321,36 +367,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background_without_bottom_border">
+                    android:background="@drawable/cell_background_without_bottom_border"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
                 <FrameLayout
                     android:layout_width="@dimen/table_cell_size"
                     android:layout_height="@dimen/table_cell_size"
-                    android:background="@drawable/cell_background">
+                    android:background="@drawable/cell_background"
+                    android:clickable="false">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="false" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -360,7 +414,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="260dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:onClick="onDiceClick">
 
         <TextView
             android:id="@+id/turn_display"

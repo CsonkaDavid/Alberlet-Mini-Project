@@ -15,6 +15,16 @@ public class Table {
         this.firstColumn = new ArrayList<>();
         this.secondColumn = new ArrayList<>();
         this.thirdColumn = new ArrayList<>();
+
+        firstColumn.add(0);
+        firstColumn.add(0);
+        firstColumn.add(0);
+        secondColumn.add(0);
+        secondColumn.add(0);
+        secondColumn.add(0);
+        thirdColumn.add(0);
+        thirdColumn.add(0);
+        thirdColumn.add(0);
     }
 
     public void addToColumn(int columnIndex, int value) {

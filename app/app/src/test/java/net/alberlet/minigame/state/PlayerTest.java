@@ -46,6 +46,7 @@ public class PlayerTest extends TestCase {
         assertEquals(135, testPlayer.getScore());
     }
 
+    @Test
     public void testSetScoreWithDifferentValues() {
         Player testPlayer = new Player("testplayer");
 
@@ -63,6 +64,33 @@ public class PlayerTest extends TestCase {
 
         testPlayer.setScore();
         assertEquals(36, testPlayer.getScore());
+    }
+
+    @Test
+    public void testSetScoreWithAllZeros() {
+        Player testPlayer = new Player("testplayer");
+
+        testPlayer.setScore();
+        assertEquals(0, testPlayer.getScore());
+    }
+
+    @Test
+    public void testSetScoreWithFewZeros() {
+        Player testPlayer = new Player("testplayer");
+        testPlayer.getTable().addToColumn(0, 5);
+        testPlayer.getTable().addToColumn(0, 0);
+        testPlayer.getTable().addToColumn(0, 0);
+
+        testPlayer.getTable().addToColumn(1, 5);
+        testPlayer.getTable().addToColumn(1, 5);
+        testPlayer.getTable().addToColumn(1, 0);
+
+        testPlayer.getTable().addToColumn(2, 5);
+        testPlayer.getTable().addToColumn(2, 0);
+        testPlayer.getTable().addToColumn(2, 0);
+
+        testPlayer.setScore();
+        assertEquals(30, testPlayer.getScore());
     }
 
 

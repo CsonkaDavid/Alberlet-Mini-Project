@@ -48,6 +48,9 @@ public class Player {
         for(int i = 0; i < 3; i++) {
             value = column.get(i);
 
+            if(value==0)
+                continue;
+
             if(value == savedValue)
                 continue;
 
@@ -56,6 +59,8 @@ public class Player {
             for(int j = i+1; j < 3; j++)
                 if (column.get(j) == value)
                     counter++;
+                else if(column.get(j)==0)
+                    break;
 
             switch (counter) {
                 case 1: {

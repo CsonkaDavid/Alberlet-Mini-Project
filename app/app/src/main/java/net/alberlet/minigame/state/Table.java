@@ -19,14 +19,18 @@ public class Table {
 
     public void addToColumn(int columnIndex, int value) {
         List<Integer> thisColumn = getColumn(columnIndex);
-        if (thisColumn.size() < 3) {
-            thisColumn.add(value);
-        }
+        for(int i=0;i<3;i++)
+            if(thisColumn.get(i)==0) {
+                thisColumn.set(i, value);
+                return;
+            }
     }
 
     public void deleteFromColumn(int columnIndex, int index){
         List<Integer> thisColumn = getColumn(columnIndex);
-        thisColumn.remove(index);
+        for(int i=0;i<3;i++)
+            if(i==index)
+                thisColumn.set(i, 0);
     }
 
     public int findInColumn(int columnIndex, int value) {
@@ -38,6 +42,16 @@ public class Table {
         }
         return -1;
     }
+
+    public int getFirstEmptyCellIndex(int columnIndex){
+        List<Integer> currentColumn = getColumn(columnIndex);
+
+        for(int i=0; i<3; i++)
+            if(currentColumn.get(i)==0)
+                return i;
+        return -1;
+    }
+
 
     public List<Integer> getColumn(int columnIndex) throws UnsupportedOperationException {
         if (columnIndex < 0 || columnIndex > 2) {

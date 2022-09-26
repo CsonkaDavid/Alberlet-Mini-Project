@@ -22,12 +22,12 @@ public class GameState {
     }
 
     public void startTurn() {
-        if(Objects.isNull(activePlayer) || activePlayer.equals(PLAYER_ONE)) {
-            activePlayer = PLAYER_TWO;
-            inactivePlayer = PLAYER_ONE;
-        } else {
+        if(Objects.isNull(activePlayer) || activePlayer.equals(PLAYER_TWO)) {
             activePlayer = PLAYER_ONE;
             inactivePlayer = PLAYER_TWO;
+        } else {
+            activePlayer = PLAYER_TWO;
+            inactivePlayer = PLAYER_ONE;
         }
         rollDice();
     }
